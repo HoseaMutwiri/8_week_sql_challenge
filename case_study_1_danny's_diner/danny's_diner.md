@@ -10,7 +10,7 @@ The project uses PostgreSQL syntax to analyze customer data, uncovering insights
 * [Business Case](#business-case)
 * [Entity Relationship Diagram](#entity-relationship-diagram)
 * [Database Schema](#database-schema)
-* [Solutions & Insights](#solutions-&-insights)
+* [Solutions & Insights](#solutions-and-insights)
 * [Key Skills Demonstrated](#key-skills-demonstrated)
 
 ---
@@ -44,7 +44,7 @@ erDiagram
 ```
 
 
-## 🛠️ Database Schema
+## Database Schema
 The dataset consists of 3 key tables under the dannys_dinner schema:
 
 sales: Captures all customer food orders with customer_id, order_date, and product_id.
@@ -53,9 +53,9 @@ menu: Maps the product_id to the actual product_name and price.
 
 members: Tracks the exact date a customer (customer_id) signed up for the loyalty program.
 
-## 🚀 Solutions & Insights
+## Solutions and Insights
 
-Q1: What is the total amount each customer spent at the restaurant?
+### Q1: What is the total amount each customer spent at the restaurant?
 ``` SQL
 SET search_path = dannys_dinner;
 
@@ -74,7 +74,7 @@ Query results Question 1:
 
 ![Query results Question 1:](images/question1.PNG)
 
-Q2: How many days has each customer visited the restaurant?
+### Q2: How many days has each customer visited the restaurant?
 
 ```SQL
 WITH diner AS (
@@ -92,7 +92,7 @@ Query results Question 2:
 
 ![Query results Question 2:](images/question2.PNG)
 
-Q3: What was the first item from the menu purchased by each customer?
+### Q3: What was the first item from the menu purchased by each customer?
 
 ```SQL
 WITH diner AS (
@@ -112,7 +112,7 @@ Query results Question 3:
 
 ![Query results Question 3:](images/question3.PNG)
 
-Q4: What is the most purchased item on the menu and how many times was it purchased by all customers?
+### Q4: What is the most purchased item on the menu and how many times was it purchased by all customers?
 
 ```SQL
 WITH diner AS (
@@ -132,8 +132,8 @@ Query results Question 4:
 
 ![Query results Question 4:](images/question4.PNG)
 
-Q5: Which item was the most popular for each customer?
-Option A: When ties have been eliminated (Using ROW_NUMBER())
+### Q5: Which item was the most popular for each customer?
+### Option A: When ties have been eliminated (Using ROW_NUMBER())
 
 
 ```SQL
@@ -158,7 +158,7 @@ Query results (Ties Eliminated) Question 5:
 
 ![Query results (Ties Eliminated) Question 5:](images/question5.PNG)
 
-Option B: When ties have NOT been eliminated (Using RANK())
+### Option B: When ties have NOT been eliminated (Using RANK())
 
 
 ```SQL
@@ -183,7 +183,7 @@ Query Result (Ties Retained) Question 5:
 
 ![Query Result (Ties Retained) Question 5:](images/question5b.PNG)
 
-Q6: Which item was purchased first by the customer after they became a member?
+### Q6: Which item was purchased first by the customer after they became a member?
 
 ```SQL
 WITH orders_after_membership AS (
@@ -206,7 +206,7 @@ Query results Question 6:
 
 ![Query results Question 6:](images/question6.PNG)
 
-Q7: Which item was purchased just before the customer became a member?
+### Q7: Which item was purchased just before the customer became a member?
 
 ```SQL
 
@@ -231,7 +231,7 @@ Query results Question 7:
 
 ![Query results Question 7:](images/question7.PNG)
 
-Q8: What is the total items and amount spent for each member before they became a member?
+### Q8: What is the total items and amount spent for each member before they became a member?
 
 ```SQL
 WITH all_orders_and_prices AS (
@@ -253,7 +253,7 @@ Query results Question 8:
 
 ![Query results Question 8:](images/question8.PNG)
 
-Q9: If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
+### Q9: If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
 
 ```SQL
 WITH all_orders_and_prices AS (
@@ -275,7 +275,7 @@ Query results Question 9:
 ![Query results Question 9:](images/question9.PNG)
 
 
-Q10: In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January?
+### Q10: In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January?
 
 ```SQL
 WITH points_category_table AS (
@@ -305,9 +305,8 @@ Query results Question 10:
 ![Query results Question 10](images/question10.PNG)
 
 
-🌟 Bonus Challenges
-Bonus 1: Join All The Things (View Creation)
-Recreates the baseline summary schema mapping out whether orders were placed before or after joining the membership program.
+### 🌟 Bonus Challenges
+### Bonus 1: Join All The Things (View Creation)/nRecreates the baseline summary schema mapping out whether orders were placed before or after joining the membership program.
 
 ```SQL
 CREATE OR REPLACE VIEW dannys_dinner.all_data AS (
@@ -328,8 +327,8 @@ View Output Dataset:
 
 ![View Output Dataset:](images/bonusquestion1.PNG)
 
-Bonus 2: Rank All The Things (View Creation)
-Generates sequential rankings specifically for member purchases while keeping non-member records labeled as NULL.
+### Bonus 2: Rank All The Things (View Creation)
+### Generates sequential rankings specifically for member purchases while keeping non-member records labeled as NULL.
 
 
 ```SQL
@@ -358,7 +357,7 @@ View Output Dataset:
 
 ![View Output Dataset:](images/bonusquestion2.PNG)
 
-## 🧠 Key Skills Demonstrated
+## Key Skills Demonstrated
 
 **Advanced Aggregations:** Utilizing specialized group structures (SUM, COUNT, DISTINCT).
 
