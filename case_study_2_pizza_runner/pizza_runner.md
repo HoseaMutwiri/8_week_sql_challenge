@@ -33,7 +33,7 @@ FROM pizza_runner.customer_orders;
 ```
 **Results:** unique_customer_orders 5
 
-![q2:](images\q2_pm.PNG)
+![q2:](images/q2_pm.PNG)
 
 ### Q3. How many successful orders were delivered by each runner?
 
@@ -46,7 +46,7 @@ ORDER BY number_of_successful_orders;
 ```
 **Results:**
 
-![q2:](images\q3_number_of_successful_orders_by_runner.PNG)
+![q3:](images/q3_number_of_successful_orders_by_runner.PNG)
 
 ### Q4. How many of each type of pizza was delivered?
 
@@ -63,7 +63,7 @@ ORDER BY number_of_pizza_delivered;
 ```
 **Results:**
 
-![q2:](images\q4_number_of_pizzas_delivered_by_type.PNG)
+![q4:](images/q4_number_of_pizzas_delivered_by_type.PNG)
 
 ### Q5. How many Vegetarian and Meatlovers were ordered by each customer?
 
@@ -77,7 +77,7 @@ ORDER BY c.customer_id;
 ```
 **Results:**
 
-![q5:](images\q5_number_of_pizzas_ordered.PNG)
+![q5:](images/q5_number_of_pizzas_ordered.PNG)
 
 ### Q6. What was the maximum number of pizzas delivered in a single order?
 
@@ -94,7 +94,7 @@ LIMIT 1;
 ```
 **Results:**
 
-![q6:](images\q6_pm.PNG)
+![q6:](images/q6_pm.PNG)
 
 ### Q7. For each customer, how many delivered pizzas had at least 1 change and how many had no changes?
 
@@ -126,7 +126,7 @@ ORDER BY pizza_change;
 ```
 **Results:**
 
-![q7:](images\q7_pm.PNG)
+![q7:](images/q7_pm.PNG)
 
 ### Q8. How many pizzas were delivered that had both exclusions and extras?
 
@@ -159,7 +159,7 @@ GROUP BY pizza_change;
 
 **Results:**
 
-![q8:](images\q8_pm.PNG)
+![q8:](images/q8_pm.PNG)
 
 ### Q9.What was the total volume of pizzas ordered for each hour of the day?
 
@@ -176,7 +176,7 @@ ORDER BY total_pizzas DESC;
 
 **Results:**
 
-![q9:](images\q9_pm.PNG)
+![q9:](images/q9_pm.PNG)
 
 ### Q10. What was the volume of orders for each day of the week?
 
@@ -193,7 +193,7 @@ ORDER BY total_pizzas DESC;
 
 **Results:**
 
-![q10:](images\q10_pm.PNG)
+![q10:](images/q10_pm.PNG)
 
 ## 📈 Key Findings from Pizza Metrics
 * **Product Dominance:** Meatlovers (pizza_id: 1) is drastically more popular than Vegetarian, making up 75% of all successful deliveries (9 out of 12 delivered pizzas).
