@@ -23,7 +23,7 @@ FROM pizza_runner.customer_orders;
 ```
 **Results:** number_of_pizzas_ordered 14
 
-![q1:](images\q1_number_of_pizzas_ordered.PNG)
+![q1:](images/q1_number_of_pizzas_ordered.PNG)
 
 ### Q2. How many unique customer orders were made?
 
