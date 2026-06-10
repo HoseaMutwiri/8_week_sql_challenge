@@ -27,8 +27,8 @@ FROM pizza_runner.customer_orders;
 
 ### Q2. How many unique customer orders were made?
 
-``` sql
-SQLSELECT COUNT(DISTINCT(customer_id)) AS unique_customer_orders
+```sql
+SELECT COUNT(DISTINCT(customer_id)) AS unique_customer_orders
 FROM pizza_runner.customer_orders;
 ```
 **Results:** unique_customer_orders 5
